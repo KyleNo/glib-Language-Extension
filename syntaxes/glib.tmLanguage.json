@@ -1,0 +1,205 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "GL Interface Bytestream",
+	"scopeName": "source.glib",
+	"patterns": [
+	  {
+		"include": "#comments"
+	  },
+	  {
+		"include": "#line-continuation"
+	  },
+	  {
+		"include": "#numbers"
+	  },
+	  {
+		"include": "#integers"
+	  },
+	  {
+		"include": "#file-paths"
+	  },
+	  {
+		"include": "#arrays"
+	  },
+	  {
+		"include": "#booleans"
+	  },
+	  {
+		"include": "#ranges"
+	  },
+	  {
+		"include": "#colors"
+	  },
+	  {
+		"include": "#brackets"
+	  },
+	  {
+		"include": "#commands"
+	  },
+	  {
+		"include": "#variables"
+	  }
+	],
+	"repository": {
+	  "comments": {
+		"name": "comment.line",
+		"patterns": [
+		  {
+			"name": "comment.line.number-sign",
+			"match": "#.*$"
+		  },
+		  {
+			"name": "comment.line.double-slash",
+			"match": "//.*$"
+		  }
+		]
+	  },
+	  "line-continuation": {
+		"name": "meta.line-continuation",
+		"match": "\\\\(\\r\\n|\\n)"
+	  },
+	  "numbers": {
+		"name": "constant.numeric",
+		"match": "(?<!\\w)[+-]?(\\d+([.]\\d*)?([eE][+-]?\\d*)?|[.]\\d+([eE][+-]?\\d*)?)"
+	  },
+	  "integers": {
+		"name": "constant.numeric.integer",
+		"match": "-?\\b\\d+\\b"
+	  },
+	  "file-paths": {
+		"name": "string.unquoted",
+		"match": "(?:[a-zA-Z0-9_\\-\\/\\.]+\\\\\\\\)*[a-zA-Z0-9_\\-\\/\\.]+\\.[a-zA-Z0-9]+"
+	  },
+	  "arrays": {
+		"name": "meta.array",
+		"begin": "\\[",
+		"end": "\\]",
+		"beginCaptures": {
+		  "0": { "name": "punctuation.bracket.square" }
+		},
+		"endCaptures": {
+		  "0": { "name": "punctuation.bracket.square" }
+		},
+		"patterns": [
+		  {
+			"include": "#numbers"
+		  },
+		  {
+			"include": "#line-continuation"
+		  }
+		]
+	  },
+	  "booleans": {
+		"name": "constant.boolean",
+		"match": "<\\s*(true|false|1|0)\\s*>"
+	  },
+	  "ranges": {
+		"name": "meta.range",
+		"begin": "<",
+		"end": ">",
+		"beginCaptures": {
+		  "0": { "name": "punctuation.bracket.angle" }
+		},
+		"endCaptures": {
+		  "0": { "name": "punctuation.bracket.angle" }
+		},
+		"patterns": [
+		  {
+			"include": "#numbers"
+		  },
+		  {
+			"include": "#line-continuation"
+		  }
+		]
+	  },
+	  "colors": {
+		"name": "meta.color",
+		"begin": "\\{",
+		"end": "\\}",
+		"beginCaptures": {
+		  "0": { "name": "punctuation.bracket.curly" }
+		},
+		"endCaptures": {
+		  "0": { "name": "punctuation.bracket.curly" }
+		},
+		"patterns": [
+		  {
+			"include": "#numbers"
+		  },
+		  {
+			"include": "#line-continuation"
+		  }
+		]
+	  },
+	  "brackets": {
+		"patterns": [
+		  {
+			"match": "\\[|\\]",
+			"name": "punctuation.bracket.square"
+		  },
+		  {
+			"match": "\\{|\\}",
+			"name": "punctuation.bracket.curly"
+		  },
+		  {
+			"match": "\\(|\\)",
+			"name": "punctuation.bracket.round"
+		  },
+		  {
+			"match": "<|>",
+			"name": "punctuation.bracket.angle"
+		  }
+		]
+	  },
+	  "commands": {
+		"patterns": [
+		  {
+			"include": "#window-and-viewing-volume-commands"
+		  },
+		  {
+			"include": "#transformations-commands"
+		  },
+		  {
+			"include": "#geometry-commands"
+		  },
+		  {
+			"include": "#textures-commands"
+		  },
+		  {
+			"include": "#shaders-commands"
+		  },
+		  {
+			"include": "#miscellaneous-commands"
+		  }
+		]
+	  },
+	  "window-and-viewing-volume-commands": {
+		"name": "entity.name.function.window.glib",
+		"match": "\\b(WindowSize|Ortho|Perspective)\\b"
+	  },
+	  "transformations-commands": {
+		"name": "entity.name.function.tranform.glib",
+		"match": "\\b(Translate|Rotate|Scale|PushMatrix|TransformBegin|PopMatrix|TransformEnd)\\b"
+	  },
+	  "geometry-commands": {
+		"name": "entity.name.function.geometry.glib",
+		"match": "\\b(Box|Cylinder|Cone|DiskXY|JitterCloud|LinesAdjacency|Obj|ObjAdj|PointCloud|QuadBox|QuadXY|QuadXZ|QuadYZ|Soccerball|Sphere|Teapot|Torus|WireBox|WireCylinder|WireCone|WireObj|WireSphere|WireTorus|WireTeapot|Xarrow)\\b"
+	  },
+	  "textures-commands": {
+		"name": "entity.name.function.texture.glib",
+		"match": "\\b(Texture2D|Texture3D|CubeMap)\\b"
+	  },
+	  "shaders-commands": {
+		"name": "entity.name.function.shader.glib",
+		"match": "\\b(Vertex|TessControl|TessEvaluation|Geometry|Fragment|Program)\\b"
+	  },
+	  "miscellaneous-commands": {
+		"name": "entity.name.function.misc.glib",
+		"match": "\\b(Background|Color|Flat|GSTAP|LineWidth|LookAt|Noise2D|Noise3D|PointSize|Smooth|Timer|MessageBox)\\b"
+	  },
+	  "variables": {
+		"name": "variable",
+		"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+	  }
+	}
+  }

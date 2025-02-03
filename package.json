@@ -1,0 +1,32 @@
+{
+  "name": "glib",
+  "displayName": "glib",
+  "description": "GLMan Language Support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "glib",
+      "aliases": ["GL Interface Bytestream", "glib"],
+      "extensions": [".glib"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "glib",
+      "scopeName": "source.glib",
+      "path": "./syntaxes/glib.tmLanguage.json"
+    }],
+    "themes": [
+      {
+        "label": "GLIB Color Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/glib-color-theme.json"
+      }
+    ]
+  }
+}

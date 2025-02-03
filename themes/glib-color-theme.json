@@ -1,0 +1,221 @@
+{
+	"name": "GLIB Color Theme",
+	"type": "dark",
+	"colors": {
+	  // Copy colors from the Dark+ theme
+	  "editor.foreground": "#D4D4D4",
+	  "editor.background": "#1E1E1E",
+	  "editor.selectionBackground": "#264F78",
+	  "editor.inactiveSelectionBackground": "#3A3D4100",
+	  "editor.lineHighlightBackground": "#2D2D2D",
+	  "editorCursor.foreground": "#AEAFAD",
+	  "editorWhitespace.foreground": "#404040",
+	  "editorIndentGuide.background1": "#404040",
+	  "editorIndentGuide.activeBackground1": "#707070",
+	  "editor.selectionHighlightBorder": "#264F78",
+	  "editor.wordHighlightBackground": "#575757B3",
+	  "editor.wordHighlightStrongBackground": "#004972B3",
+	  "editor.findMatchBackground": "#515C6A",
+	  "editor.findMatchHighlightBackground": "#EA5C0055",
+	  "editor.findRangeHighlightBackground": "#3A3D4166",
+	  "editor.hoverHighlightBackground": "#264F784D",
+	  "editor.lineHighlightBorder": "#282828",
+	  "editorLink.activeForeground": "#4E94CE",
+	  "editor.rangeHighlightBackground": "#FFFFFF0B",
+	  "editor.symbolHighlightBackground": "#EA5C0055",
+	  "editorWarning.foreground": "#CCA700",
+	  "editorError.foreground": "#F48771",
+	  "editorBracketMatch.background": "#515C6A",
+	  "editorBracketMatch.border": "#515C6A",
+	  "editorOverviewRuler.border": "#5A5A5A",
+	  "editorOverviewRuler.findMatchForeground": "#D186167E",
+	  "editorOverviewRuler.rangeHighlightForeground": "#FFFFFF0B",
+	  "editorOverviewRuler.selectionHighlightForeground": "#A0A0A0CC",
+	  "editorOverviewRuler.wordHighlightForeground": "#A0A0A0CC",
+	  "editorOverviewRuler.wordHighlightStrongForeground": "#C5A5C5CC",
+	  "editorOverviewRuler.modifiedForeground": "#1B81A8",
+	  "editorOverviewRuler.addedForeground": "#487E02",
+	  "editorOverviewRuler.deletedForeground": "#C41A16",
+	  "editorOverviewRuler.errorForeground": "#C41A16",
+	  "editorOverviewRuler.warningForeground": "#CCA700",
+	  "editorOverviewRuler.infoForeground": "#1B81A8",
+	  "editorGutter.background": "#1E1E1E",
+	  "editorGutter.modifiedBackground": "#1B81A8",
+	  "editorGutter.addedBackground": "#487E02",
+	  "editorGutter.deletedBackground": "#C41A16",
+	  "editorGutter.commentRangeForeground": "#5A5A5A",
+	  "editorCodeLens.foreground": "#999999",
+	  "editorLightBulb.foreground": "#FFCC00",
+	  "editorLightBulbAutoFix.foreground": "#75BEFF",
+	  "diffEditor.insertedTextBackground": "#9BB95533",
+	  "diffEditor.removedTextBackground": "#FF000033",
+	  "editorWidget.background": "#252526",
+	  "editorWidget.border": "#454545",
+	  "editorSuggestWidget.background": "#252526",
+	  "editorSuggestWidget.border": "#454545",
+	  "editorSuggestWidget.foreground": "#D4D4D4",
+	  "editorSuggestWidget.highlightForeground": "#4E94CE",
+	  "editorSuggestWidget.selectedBackground": "#2A2D2E",
+	  "editorHoverWidget.background": "#252526",
+	  "editorHoverWidget.border": "#454545",
+	  "editorHoverWidget.foreground": "#D4D4D4",
+	  "editorHoverWidget.statusBarBackground": "#2A2D2E",
+	  "editorMarkerNavigation.background": "#252526",
+	  "editorMarkerNavigationError.background": "#C41A16",
+	  "editorMarkerNavigationWarning.background": "#CCA700",
+	  "editorMarkerNavigationInfo.background": "#1B81A8",
+	  "editorMarkerNavigationError.headerBackground": "#C41A1633",
+	  "editorMarkerNavigationWarning.headerBackground": "#CCA70033",
+	  "editorMarkerNavigationInfo.headerBackground": "#1B81A833",
+	  "editorBracketHighlight.foreground1": "#FFD700",
+	  "editorBracketHighlight.foreground2": "#DA70D6",
+	  "editorBracketHighlight.foreground3": "#179FFF",
+	  "editorBracketHighlight.foreground4": "#FFD700",
+	  "editorBracketHighlight.foreground5": "#DA70D6",
+	  "editorBracketHighlight.foreground6": "#179FFF",
+	  "editorBracketHighlight.unexpectedBracket.foreground": "#FF0000"
+	},
+	"tokenColors": [
+	  // Copy tokenColors from the Dark+ theme
+	  {
+		"name": "Comment",
+		"scope": "comment",
+		"settings": {
+		  "foreground": "#6A9955"
+		}
+	  },
+	  {
+		"name": "String",
+		"scope": "string",
+		"settings": {
+		  "foreground": "#CE9178"
+		}
+	  },
+	  {
+		"name": "Number",
+		"scope": "constant.numeric",
+		"settings": {
+		  "foreground": "#B5CEA8"
+		}
+	  },
+	  {
+		"name": "Keyword",
+		"scope": "keyword",
+		"settings": {
+		  "foreground": "#569CD6"
+		}
+	  },
+	  {
+		"name": "Variable",
+		"scope": "variable",
+		"settings": {
+		  "foreground": "#9CDCFE"
+		}
+	  },
+	  {
+		"name": "Function",
+		"scope": "entity.name.function",
+		"settings": {
+		  "foreground": "#DCDCAA"
+		}
+	  },
+	  {
+		"name": "Type",
+		"scope": "entity.name.type",
+		"settings": {
+		  "foreground": "#4EC9B0"
+		}
+	  },
+	  {
+		"name": "Punctuation",
+		"scope": "punctuation",
+		"settings": {
+		  "foreground": "#D4D4D4"
+		}
+	  },
+	  {
+		"name": "Brackets",
+		"scope": "punctuation.bracket",
+		"settings": {
+		  "foreground": "#D4D4D4"
+		}
+	  },
+	  {
+		"name": "Operator",
+		"scope": "keyword.operator",
+		"settings": {
+		  "foreground": "#D4D4D4"
+		}
+	  },
+	  {
+		"name": "Storage",
+		"scope": "storage",
+		"settings": {
+		  "foreground": "#569CD6"
+		}
+	  },
+	  {
+		"name": "Support",
+		"scope": "support",
+		"settings": {
+		  "foreground": "#9CDCFE"
+		}
+	  },
+	  {
+		"name": "Invalid",
+		"scope": "invalid",
+		"settings": {
+		  "foreground": "#F44747"
+		}
+	  },
+	  // Add your custom token colors here
+	  {
+		"scope": "constant.boolean",
+		"settings": {
+		  "foreground": "#c95b92"
+		}
+	  },
+	  {
+		"scope": "meta.range, punctuation.bracket.angle",
+		"settings": {
+		  "foreground": "#5789f6"
+		}
+	  },
+	  {
+		"scope": "meta.color",
+		"settings": {
+		  "foreground": "#FFA500"
+		}
+	  },
+	  {
+		"scope": "string.unquoted",
+		"settings": {
+		  "foreground": "#CE9178"
+		}
+	  },
+	  {
+		"scope": "variable",
+		"settings": {
+		  "foreground": "#9CDCFE"
+		}
+	  },
+	  {
+		"scope": ["entity.name.function.window.glib", "entity.name.function.misc.glib"],
+		"settings": {
+		  "foreground": "#d4aadc"
+		}
+	  },
+	  {
+		"scope": ["entity.name.function.shader.glib"],
+		"settings": {
+		  "foreground": "#569CD6"
+		}
+	  },
+	  {
+		"scope": ["entity.name.function.texture.glib"],
+		"settings": {
+		  "foreground": "#5addcb"
+		}
+	  }
+	]
+  }
